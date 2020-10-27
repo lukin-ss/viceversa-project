@@ -19,4 +19,9 @@ def reverse(request):
     vvreview_text = request.GET['vvreview']
     print(vvreview_text)
     reversed_text = vvreview_text[::-1]
-    return render(request, 'reverse.html', {'vvreview': vvreview_text, 'reversedtext': reversed_text})
+    word_count = len(vvreview_text.split())
+    return render(request, 'reverse.html', {
+        'vvreview': vvreview_text,
+        'reversedtext': reversed_text,
+        'wordcount': word_count
+    })
