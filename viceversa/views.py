@@ -12,3 +12,11 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, 'home.html')
+    # return render(request, 'home.html', {'greeting': 'Hello!'})
+
+
+def reverse(request):
+    vvreview_text = request.GET['vvreview']
+    print(vvreview_text)
+    reversed_text = vvreview_text[::-1]
+    return render(request, 'reverse.html', {'vvreview': vvreview_text, 'reversedtext': reversed_text})

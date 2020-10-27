@@ -6,7 +6,9 @@
 </head>
 <body>
     <h1>Vise Versa</h1>
-    <form action="/action_page.php">
+<!--    {{greeting}}-->
+<!--    <form action="reverse">-->
+    <form action="{% url 'reverse' %}">
         <textarea id="vvreview" name="vvreview" rows="7" cols="50"></textarea>
         <br><br>
         <input type="submit" value="Reverse!">
